@@ -1,0 +1,39 @@
+body {
+  background: linear-gradient(135deg, #e0f7fa 0%, #f1f8e9 100%);
+  color: #2e3a3a;
+  font-family: "Segoe UI", "Prompt", "Kanit", sans-serif;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 2rem 1rem;
+}
+
+span {
+  font-size: 1.08rem;
+}
+
+.BtnScrollUp {
+  position: fixed;
+  width: 3.5rem;
+  bottom: 40px;
+  height: 2rem;
+  font-size: 3rem;
+  left: 92%;
+  z-index: 1;
+  color: #6fcf97;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px 0 rgba(111, 207, 151, 0.15);
+  border: 1px solid #b2dfdb;
+  transition: background 0.2s;
+}
+.BtnScrollUp:hover {
+  background: #e0f2f1;
+}

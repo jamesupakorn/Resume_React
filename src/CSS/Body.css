@@ -1,0 +1,11 @@
+.body > .ant-card > .ant-card-head {
+  width: 100%;
+  background: #e3f6ec !important;
+  color: #5a7261 !important;
+  border-bottom: 1.5px solid #d0e7db !important;
+}
+.body > .ant-card > .ant-card-body {
+  text-align: center;
+  background: #f6faf7 !important;
+  color: #35524a;
+}

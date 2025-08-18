@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Supakorn Raengkasiwit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: #f0f4f8;
+        }
+        body {
+            font-family: 'Montserrat', 'Kanit', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #eafaf2 100%);
+            min-height: 100vh;
+        }
+        .a4-page {
+            background: #fafdff;
+            width: 210mm;
+            min-height: 297mm;
+            max-width: 210mm;
+            margin: 0 auto;
+            box-shadow: 0 2px 12px 0 rgba(0,64,128,0.10);
+            border-radius: 16px;
+            padding: 6mm 4mm 4mm 4mm;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border: 1.5px solid #b2dfdb;
+        }
+        @media print {
+            body, .a4-page {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                margin: 0 !important;
+                width: 210mm !important;
+                min-height: 297mm !important;
+                max-width: 210mm !important;
+                padding: 0 !important;
+            }
+        }
+        .profile-photo {
+            width: 54mm;
+            height: 54mm;
+            border-radius: 50%;
+            border: 3px solid #b2dfdb;
+            box-shadow: 0 4px 18px rgba(46,93,80,0.13);
+            margin: 0 auto 12px auto;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+            background: #e0f7fa;
+        }
+        .resume-header {
+            text-align: center;
+            margin-bottom: 2.5mm;
+        }
+        .resume-header h1 {
+            font-family: 'Montserrat', 'Kanit', sans-serif;
+            font-size: 1.18rem;
+            margin: 0.18rem 0 0.08rem 0;
+            color: #0a3d62;
+            letter-spacing: 0.5px;
+        }
+        .resume-header p {
+            font-size: 0.85rem;
+            color: #2e5d50;
+            margin: 0;
+            font-family: 'Kanit', 'Montserrat', sans-serif;
+        }
+        .resume-section {
+            margin-bottom: 2.1mm;
+        }
+        .resume-section-title {
+            font-size: 0.89rem;
+            font-weight: 700;
+            color: #0a3d62;
+            margin-bottom: 0.18rem;
+            border-bottom: 1.5px solid #b2dfdb;
+            padding-bottom: 0.07rem;
+            font-family: 'Montserrat', 'Kanit', sans-serif;
+            letter-spacing: 0.2px;
+        }
+        .resume-list {
+            margin: 0;
+            padding-left: 0;
+            width: 100%;
+        }
+        .resume-list li {
+            margin-bottom: 0.32em;
+            font-size: 0.98rem;
+            color: #1a3c40;
+            text-align: left;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+        .experience-item {
+            border-left: 2px solid #2e5d50;
+            padding-left: 0.32em;
+            margin-bottom: 0.32em;
+            background: none;
+        }
+        .exp-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #0a3d62;
+            margin-bottom: 0.04em;
+            font-family: 'Montserrat', 'Kanit', sans-serif;
+        }
+        .exp-company {
+            color: #2e5d50;
+            font-size: 0.72rem;
+            margin-bottom: 0.04em;
+        }
+        .exp-list {
+            margin: 0.07em 0 0.07em 0.7em;
+            padding: 0;
+            font-size: 0.7rem;
+            color: #1a3c40;
+        }
+        .two-col {
+            display: flex;
+            gap: 2.5mm;
+        }
+        .col {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+        .col-left-card {
+            background: #e3f3fa;
+            border-radius: 18px;
+            box-shadow: 0 2px 12px 0 rgba(0,64,128,0.07);
+            padding: 18px 18px 18px 18px;
+            margin-bottom: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="p-8">
+
+        <div class="a4-page">
+            <div class="resume-header">
+                <img class="profile-photo" src="/IMG/PicProfile.jpeg" alt="Profile Picture">
+                <h1>Supakorn Raengkasiwit</h1>
+                <p>Sr. Programmer / Full Stack Developer</p>
+            </div>
+            <div class="two-col">
+                <div class="col col-left-card">
+                    <div class="resume-section">
+                        <div class="resume-section-title">Contact Information</div>
+                        <ul class="resume-list">
+                            <li>&#9742; Phone: 093-772-0044</li>
+                            <li>&#9993; Email: jamesupakorn007@gmail.com</li>
+                            <li>&#9990; LINE: manofmoon</li>
+                        </ul>
+                    </div>
+                    <div class="resume-section">
+                        <div class="resume-section-title">Technical Skills</div>
+                        <ul class="resume-list">
+                            <li><b>Expert:</b> Java, JavaServer Pages (JSP), JavaScript, HTML5, CSS, Bootstrap</li>
+                            <li><b>Intermediate:</b> Spring Boot, C#/.NET Framework, React</li>
+                            <li><b>Basic:</b> Python, .NET Core MVC, AngularJS, React Native</li>
+                        </ul>
+                    </div>
+                    <div class="resume-section">
+                        <div class="resume-section-title">Other Skills</div>
+                        <ul class="resume-list">
+                            <li>Adobe Photoshop</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Fast learner, patient, good interpersonal skills, works well with others</li>
+                        </ul>
+                    </div>
+                    <div class="resume-section">
+                        <div class="resume-section-title">Education</div>
+                        <ul class="resume-list">
+                            <li><b>Bachelor's Degree</b><br>Information Systems<br>Rajamangala University of Technology Phra Nakhon</li>
+                            <li><b>Higher Vocational Certificate</b><br>Business Computer<br>Thonburi Commercial College</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="resume-section">
+                        <div class="resume-section-title">Profile Summary</div>
+                        <div style="font-size:0.98rem; color:#444; margin-bottom:0.7em;">
+                            A programmer with over 5 years of experience, proficient in both backend and frontend development using Java, JSP, and Spring Boot. Has a strong portfolio of complex projects such as medical data management systems and human resource management systems. Possesses the ability to provide advice and solve problems for the team effectively.
+                        </div>
+                    </div>
+                    <div class="resume-section">
+                        <div class="resume-section-title">Professional Experience</div>
+                        <div>
+                            <div class="experience-item">
+                                <div class="exp-title">Sr. Programmer</div>
+                                <div class="exp-company">Entronica Co., Ltd. | May 2024 – Present</div>
+                                <ul class="exp-list">
+                                    <li>Responsible for backend work using Java Spring Boot for developing and launching new systems.</li>
+                                    <li>Acts as a key consultant for the team, helping to improve work efficiency and solve problems quickly.</li>
+                                </ul>
+                            </div>
+                            <div class="experience-item">
+                                <div class="exp-title">Project Management Office</div>
+                                <div class="exp-company">INTERNATIONAL RESEARCH CORPORATION | November 2023 – April 2024</div>
+                                <ul class="exp-list">
+                                    <li>Oversaw the delivery of programs according to schedule and rigorously checked their accuracy, reducing the risk of project delays.</li>
+                                </ul>
+                            </div>
+                            <div class="experience-item">
+                                <div class="exp-title">Full Stack Web Developer</div>
+                                <div class="exp-company">myHR Corporation Limited | June 2021 – November 2023</div>
+                                <ul class="exp-list">
+                                    <li>Developed and designed the Human Resource Management (HRM) system for both the backend and frontend using JSP, AngularJS, and JavaScript.</li>
+                                </ul>
+                            </div>
+                            <div class="experience-item">
+                                <div class="exp-title">Programmer</div>
+                                <div class="exp-company">SUPREME PRODUCTS Co., Ltd. | December 2018 – May 2021</div>
+                                <ul class="exp-list">
+                                    <li>Developed impactful and distinct programs: Ambulance camera viewing program, Queue calling program, Tele Pharma video call platform.</li>
+                                    <li>Helped medical staff assess situations and provide accurate and timely services.</li>
+                                </ul>
+                            </div>
+                            <div class="experience-item">
+                                <div class="exp-title">Administrative Officer</div>
+                                <div class="exp-company">Thonburi Commercial College | May 2017 – November 2018</div>
+                                <ul class="exp-list">
+                                    <li>Served as an IT Support and managed research, as well as preparing official documents.</li>
+                                </ul>
+                            </div>
+                            <div class="experience-item">
+                                <div class="exp-title">Loan Officer</div>
+                                <div class="exp-company">Thai Credit Retail Bank | March 2016 – April 2017</div>
+                                <ul class="exp-list">
+                                    <li>Advised on loan products and managed debt, gaining experience in customer communication.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
