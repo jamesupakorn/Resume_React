@@ -1,5 +1,5 @@
 import { Image } from "antd";
-const picProfile = "/IMG/PicProfile.jpeg";
+const picProfile = "/Resume_React/IMG/PicProfile.jpeg";
 import ChangeLang from "./Components/ChangeLang";
 import { useTranslation } from "react-i18next";
 import {
