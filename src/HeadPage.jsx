@@ -1,5 +1,9 @@
 import { Image } from "antd";
+<<<<<<< HEAD
 const picProfile = (import.meta.env.BASE_URL || "/") + "IMG/PicProfile.jpeg";
+=======
+const picProfile = "/Resume_React/IMG/PicProfile.jpeg";
+>>>>>>> 295971bb0d828fb6bb8e50a4c0a7b8e158046dfb
 import ChangeLang from "./Components/ChangeLang";
 import { useTranslation } from "react-i18next";
 import {
@@ -24,10 +28,17 @@ const HeadPage = (props) => {
     let fileName = "";
     const base = import.meta.env.BASE_URL || "/";
     if (lang === "th") {
+<<<<<<< HEAD
       resumePath = base + "Resume Supakorn(TH).html";
       fileName = "Resume Supakorn(TH).pdf";
     } else {
       resumePath = base + "Resume Supakorn(EN).html";
+=======
+  resumePath = "/Resume_React/Resume Supakorn(TH).html";
+      fileName = "Resume Supakorn(TH).pdf";
+    } else {
+  resumePath = "/Resume_React/Resume Supakorn(EN).html";
+>>>>>>> 295971bb0d828fb6bb8e50a4c0a7b8e158046dfb
       fileName = "Resume Supakorn(EN).pdf";
     }
     // ดึง HTML แล้วแปลงเป็น PDF
