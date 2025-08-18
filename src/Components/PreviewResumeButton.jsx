@@ -2,10 +2,11 @@ import { EyeOutlined } from "@ant-design/icons";
 
 const PreviewResumeButton = ({ lang }) => {
   // Path to resume html in public folder
+  const base = import.meta.env.BASE_URL || "/";
   const fileName = lang === "th"
     ? "Resume Supakorn(TH).html"
     : "Resume Supakorn(EN).html";
-  const url = `/${fileName}`;
+  const url = `${base}${fileName}`;
 
   const handlePreview = () => {
     window.open(url, "_blank");

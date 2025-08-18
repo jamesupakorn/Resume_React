@@ -1,5 +1,5 @@
 import { Image } from "antd";
-const picProfile = "/IMG/PicProfile.jpeg";
+const picProfile = (import.meta.env.BASE_URL || "/") + "IMG/PicProfile.jpeg";
 import ChangeLang from "./Components/ChangeLang";
 import { useTranslation } from "react-i18next";
 import {
@@ -22,11 +22,12 @@ const HeadPage = (props) => {
     const lang = _translation.i18n.language;
     let resumePath = "";
     let fileName = "";
+    const base = import.meta.env.BASE_URL || "/";
     if (lang === "th") {
-      resumePath = "/Resume Supakorn(TH).html";
+      resumePath = base + "Resume Supakorn(TH).html";
       fileName = "Resume Supakorn(TH).pdf";
     } else {
-      resumePath = "/Resume Supakorn(EN).html";
+      resumePath = base + "Resume Supakorn(EN).html";
       fileName = "Resume Supakorn(EN).pdf";
     }
     // ดึง HTML แล้วแปลงเป็น PDF
