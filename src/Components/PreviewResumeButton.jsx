@@ -5,7 +5,7 @@ const PreviewResumeButton = ({ lang }) => {
   const fileName = lang === "th"
     ? "Resume Supakorn(TH).html"
     : "Resume Supakorn(EN).html";
-  const url = `/${fileName}`;
+  const url = `/Resume_React/${fileName}`;
 
   const handlePreview = () => {
     window.open(url, "_blank");

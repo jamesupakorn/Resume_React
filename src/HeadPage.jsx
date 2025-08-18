@@ -23,10 +23,10 @@ const HeadPage = (props) => {
     let resumePath = "";
     let fileName = "";
     if (lang === "th") {
-      resumePath = "/Resume Supakorn(TH).html";
+  resumePath = "/Resume_React/Resume Supakorn(TH).html";
       fileName = "Resume Supakorn(TH).pdf";
     } else {
-      resumePath = "/Resume Supakorn(EN).html";
+  resumePath = "/Resume_React/Resume Supakorn(EN).html";
       fileName = "Resume Supakorn(EN).pdf";
     }
     // ดึง HTML แล้วแปลงเป็น PDF
