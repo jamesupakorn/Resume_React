@@ -17,35 +17,21 @@ import html2pdf from "html2pdf.js";
 const HeadPage = (props) => {
   const _translation = useTranslation();
   const _t = _translation.t;
-  // ฟังก์ชันดาวน์โหลด Resume เป็น PDF ตามภาษา
-  const handleDownloadResume = async () => {
+  // ฟังก์ชันดาวน์โหลด PDF ตรงไฟล์
+  const handleDownloadResume = () => {
     const lang = _translation.i18n.language;
-    let resumePath = "";
-    let fileName = "";
     const base = import.meta.env.BASE_URL || "/";
-    if (lang === "th") {
-      resumePath = base + "Resume Supakorn(TH).html";
-      fileName = "Resume Supakorn(TH).pdf";
-    } else {
-      resumePath = base + "Resume Supakorn(EN).html";
-      fileName = "Resume Supakorn(EN).pdf";
-    }
-    // ดึง HTML แล้วแปลงเป็น PDF
-    try {
-      const response = await fetch(resumePath);
-      const html = await response.text();
-      const element = document.createElement("div");
-      element.innerHTML = html;
-      document.body.appendChild(element);
-      await html2pdf().from(element).set({
-        filename: fileName,
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
-      }).save();
-      document.body.removeChild(element);
-    } catch (err) {
-      alert("Failed to export PDF");
-    }
+    const fileName = lang === "th"
+      ? "Resume Supakorn(TH).pdf"
+      : "Resume Supakorn(EN).pdf";
+    const url = base + fileName;
+    // สร้างลิงก์ดาวน์โหลด
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -68,7 +54,7 @@ const HeadPage = (props) => {
             <DownloadOutlined className={props.isMobile ? "resume-icon-mobile" : "resume-icon-desktop"} />
             {_t("head.download")}
           </button>
-          <PreviewResumeButton lang={_translation.i18n.language} />
+          {/* <PreviewResumeButton lang={_translation.i18n.language} /> */}
         </div>
         <div className="contact-row">
           <div className="contact-item">
