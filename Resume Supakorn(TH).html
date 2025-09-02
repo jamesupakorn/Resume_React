@@ -1,137 +1,154 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=210mm, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>เรซูเม่ - ศุภกร แรงกสิวิทย์</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        html,
         body {
-            width: 210mm;
-            min-height: 297mm;
-            background: #e0f7fa;
             font-family: 'Kanit', sans-serif;
-            color: #222;
+            background-color: #f0f4f8;
         }
-        @media print {
-            html,
-            body {
-                width: 210mm;
-                min-height: 297mm;
-            }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+        .experience-item {
+            border-left: 4px solid #34657F;
+            padding-left: 1rem;
         }
     </style>
 </head>
+<body class="p-8">
 
-<body class="flex justify-center items-center py-8">
-    <div class="bg-white shadow-2xl rounded-2xl flex w-[190mm] min-h-[277mm] overflow-hidden">
-        <!-- Left Column -->
-        <div
-            class="w-2/5 bg-gradient-to-b from-[#26a69a] to-[#1976d2] text-white flex flex-col items-center py-10 px-6">
-            <img src="IMG/PicProfile.jpeg" alt="Profile"
-                class="w-36 h-36 rounded-full border-4 border-white shadow-lg object-cover mb-6">
-            <h1 class="text-2xl font-bold mb-1">ศุภกร แรงกสิวิทย์</h1>
-            <h2 class="text-lg font-semibold mb-4">Sr.Programmer / Full Stack Developer</h2>
-            <div class="flex flex-col gap-2 text-base w-full">
-                <div class="flex items-center gap-2"><i class="fa-solid fa-phone"></i> <span>093-772-0044</span></div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-envelope"></i>
-                    <span>jamesupakorn007@gmail.com</span></div>
-                <div class="flex items-center gap-2"><i class="fa-brands fa-line"></i> <span>manofmoon</span></div>
-            </div>
-            <div class="mt-8 w-full">
-                <h3 class="text-xl font-bold border-b border-white/30 pb-1 mb-3">ทักษะด้านโปรแกรมมิ่ง</h3>
-                <div class="mb-2"><span class="font-semibold">เชี่ยวชาญ:</span> Java, JSP, JavaScript, HTML5, CSS,
-                    Bootstrap</div>
-                <div class="mb-2"><span class="font-semibold">ระดับกลาง:</span> Spring Boot, C#/.NET Framework, React
+    <div class="bg-white shadow-xl rounded-xl p-8 md:p-12 max-w-6xl mx-auto">
+        <div class="md:grid md:grid-cols-3 md:gap-12">
+
+            <!-- Left Column -->
+            <div class="md:col-span-1">
+                <div class="text-center mb-8 md:mb-12">
+                    <img class="profile-photo" src="https://scontent-sin11-2.xx.fbcdn.net/v/t1.6435-9/123053265_3838564839509686_5053320269239928304_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=TELkxxo-RxoQ7kNvwHemBzt&_nc_oc=AdnVWvz6DxPnVW4XM2zn_XbPWJY75_n06BvrNlihmirZ-fdgRZhEQ6t5BNTbS8I_XnI&_nc_zt=23&_nc_ht=scontent-sin11-2.xx&_nc_gid=yMGUDIeZYc1mvGNWzr0oFg&oh=00_AfVpKvBdShtWirN_crEjTMHa_TvR30tjryMwnrBvubnt8w&oe=68C670A2" alt="รูปโปรไฟล์">
+                    <h1 class="text-3xl font-bold text-[#003F5C] mt-4">ศุภกร แรงกสิวิทย์</h1>
+                    <p class="text-xl text-[#34657F] mt-1">Sr. Programmer / Full Stack Developer</p>
                 </div>
-                <div class="mb-2"><span class="font-semibold">พื้นฐาน:</span> Python, .NET Core MVC, AngularJS, React
-                    Native</div>
-                <div class="mb-2"><span class="font-semibold">อื่น ๆ:</span> Adobe Photoshop, Adobe Illustrator</div>
-            </div>
-            <div class="mt-8 w-full">
-                <h3 class="text-xl font-bold border-b border-white/30 pb-1 mb-3">ทักษะด้านบุคคล</h3>
-                <ul class="list-disc list-inside text-base">
-                    <li>เรียนรู้ไว</li>
-                    <li>ใจเย็น</li>
-                    <li>มนุษยสัมพันธ์ดี</li>
-                    <li>ทำงานร่วมกับผู้อื่นได้ดี</li>
-                </ul>
-            </div>
-        </div>
-        <!-- Right Column -->
-        <div class="w-3/5 flex flex-col py-10 px-10 bg-[#f8fcfc]">
-            <h2 class="text-2xl font-bold text-[#1976d2] mb-4"><i class="fa-solid fa-user-tie mr-2"></i>สรุปโปรไฟล์</h2>
-            <p class="mb-6 text-base leading-relaxed">โปรแกรมเมอร์ผู้มีประสบการณ์มากกว่า 5 ปี
-                มีความเชี่ยวชาญด้านการพัฒนาโปรแกรมทั้งในส่วน Backend และ Frontend ด้วยภาษา Java, JSP และ Spring Boot
-                มีผลงานโดดเด่นในการพัฒนาโปรเจกต์ที่ซับซ้อน เช่น ระบบจัดการข้อมูลทางการแพทย์และระบบบริหารทรัพยากรบุคคล
-                พร้อมทั้งมีความสามารถในการให้คำปรึกษาและแก้ไขปัญหาให้กับทีมได้อย่างมีประสิทธิภาพ</p>
-            <h2 class="text-2xl font-bold text-[#1976d2] mb-4 mt-2"><i
-                    class="fa-solid fa-briefcase mr-2"></i>ประสบการณ์ทำงาน</h2>
-            <div class="mb-4">
-                <div class="font-semibold text-[#26a69a]">พฤษภาคม 2567 – ปัจจุบัน | Sr. Programmer | Entronica Co., Ltd.
+
+                <div class="mb-8 p-6 bg-[#E8EFF5] rounded-lg">
+                    <h2 class="text-xl font-bold text-[#003F5C] mb-4">ข้อมูลติดต่อ</h2>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>&#9742; โทร: 093-772-0044</li>
+                        <li>&#9993; อีเมล: jamesupakorn007@gmail.com</li>
+                        <li>&#9990; LINE: manofmoon</li>
+                    </ul>
                 </div>
-                <ul class="list-disc list-inside ml-5 text-base">
-                    <li>รับผิดชอบงาน Backend โดยใช้ Java Spring Boot ในการพัฒนาและขึ้นระบบใหม่</li>
-                    <li>ทำหน้าที่ที่ปรึกษาหลักให้กับทีม ช่วยเพิ่มประสิทธิภาพการทำงานและแก้ปัญหาได้อย่างรวดเร็ว</li>
-                </ul>
-            </div>
-            <div class="mb-4">
-                <div class="font-semibold text-[#26a69a]">พฤศจิกายน 2566 – เมษายน 2567 | Project Management Office |
-                    INTERNATIONAL RESEARCH CORPORATION</div>
-                <ul class="list-disc list-inside ml-5 text-base">
-                    <li>ควบคุมการส่งมอบงานโปรแกรมให้ตรงตามกำหนด และตรวจสอบความถูกต้องของงานอย่างเข้มงวด</li>
-                    <li>ช่วยลดความเสี่ยงของความล่าช้าในโปรเจกต์</li>
-                </ul>
-            </div>
-            <div class="mb-4">
-                <div class="font-semibold text-[#26a69a]">มิถุนายน 2564 – พฤศจิกายน 2566 | Full Stack Web Developer |
-                    myHR Corporation Limited</div>
-                <ul class="list-disc list-inside ml-5 text-base">
-                    <li>พัฒนาและออกแบบระบบ HRM ทั้ง Backend และ Frontend ด้วย JSP, AngularJS และ JavaScript</li>
-                </ul>
-            </div>
-            <div class="mb-4">
-                <div class="font-semibold text-[#26a69a]">ธันวาคม 2561 – พฤษภาคม 2564 | Programmer | บริษัท
-                    สุพรีมโพดักซ์ จำกัด</div>
-                <ul class="list-disc list-inside ml-5 text-base">
-                    <li>โปรแกรมดูกล้องในรถพยาบาล: พัฒนาระบบแสดงข้อมูลสำคัญแบบ Real-time
-                        ช่วยให้แพทย์ประเมินสถานการณ์ได้แม่นยำ</li>
-                    <li>โปรแกรมเรียกคิว: สร้างระบบจัดการคิวที่สามารถจัดลำดับความเร่งด่วนและแสดงผลพร้อมเสียงเรียก</li>
-                    <li>โปรแกรม Tele Phama: พัฒนาแพลตฟอร์มวิดีโอคอลสำหรับเภสัชกร
-                        เพื่อส่งข้อมูลผู้ป่วยและยาระหว่างโรงพยาบาล</li>
-                </ul>
-            </div>
-            <div class="mb-4">
-                <div class="font-semibold text-[#26a69a]">พฤษภาคม 2560 – พฤศจิกายน 2561 | เจ้าหน้าที่ธุรการ |
-                    วิทยาลัยพณิชยการธนบุรี</div>
-                <ul class="list-disc list-inside ml-5 text-base">
-                    <li>ทำหน้าที่เป็น IT Support และดูแลงานวิจัย พร้อมจัดทำเอกสารราชการ</li>
-                </ul>
-            </div>
-            <div class="mb-4">
-                <div class="font-semibold text-[#26a69a]">มีนาคม 2559 – เมษายน 2560 | เจ้าหน้าที่แนะนำสินเชื่อ |
-                    ธนาคารไทยเครดิตเพื่อรายย่อย</div>
-                <ul class="list-disc list-inside ml-5 text-base">
-                    <li>แนะนำผลิตภัณฑ์สินเชื่อและบริหารจัดการหนี้ ทำให้มีประสบการณ์ด้านการสื่อสารกับลูกค้า</li>
-                </ul>
-            </div>
-            <h2 class="text-2xl font-bold text-[#1976d2] mb-4 mt-2"><i
-                    class="fa-solid fa-graduation-cap mr-2"></i>การศึกษา</h2>
-            <div class="mb-2">
-                <div class="font-semibold text-[#26a69a]">ปริญญาตรี: สาขาวิชาระบบสารสนเทศ</div>
-                <div class="ml-5 text-base">มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร</div>
-            </div>
-            <div class="mb-2">
-                <div class="font-semibold text-[#26a69a]">ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.): สาขาคอมพิวเตอร์ธุรกิจ
+
+                <div class="mb-8 p-6 bg-[#E8EFF5] rounded-lg">
+                    <h2 class="text-xl font-bold text-[#003F5C] mb-4">ทักษะด้านโปรแกรมมิ่ง</h2>
+                    <ul class="text-gray-700 space-y-2">
+                        <li class="font-semibold text-[#34657F]">เชี่ยวชาญ: <span class="font-normal text-gray-700">Java, JavaServer Pages (JSP), JavaScript, HTML5, CSS, Bootstrap</span></li>
+                        <li class="font-semibold text-[#34657F]">ระดับกลาง: <span class="font-normal text-gray-700">Spring Boot, C#/.NET Framework, React</span></li>
+                        <li class="font-semibold text-[#34657F]">พื้นฐาน: <span class="font-normal text-gray-700">Python, .NET Core MVC, AngularJS, React Native</span></li>
+                    </ul>
                 </div>
-                <div class="ml-5 text-base">วิทยาลัยพณิชยการธนบุรี</div>
+
+                <div class="mb-8 p-6 bg-[#E8EFF5] rounded-lg">
+                    <h2 class="text-xl font-bold text-[#003F5C] mb-4">ทักษะอื่นๆ</h2>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>เรียนรู้ไว, ใจเย็น, มนุษยสัมพันธ์ดี, ทำงานร่วมกับผู้อื่นได้ดี</li>
+                    </ul>
+                </div>
+
+                <div class="mb-8 p-6 bg-[#E8EFF5] rounded-lg">
+                    <h2 class="text-xl font-bold text-[#003F5C] mb-4">การศึกษา</h2>
+                    <ul class="text-gray-700 space-y-3">
+                        <li>
+                            <p class="font-semibold text-[#34657F]">ปริญญาตรี</p>
+                            <p>สาขาวิชาระบบสารสนเทศ</p>
+                            <p>มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-[#34657F]">ปวส.</p>
+                            <p>สาขาคอมพิวเตอร์ธุรกิจ</p>
+                            <p>วิทยาลัยพณิชยการธนบุรี</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
+            <!-- Right Column -->
+            <div class="md:col-span-2">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-[#003F5C] mb-4 border-b-2 border-[#99B2C8] pb-2">สรุปโปรไฟล์</h2>
+                    <p class="text-gray-700">
+                        โปรแกรมเมอร์ผู้มีประสบการณ์มากกว่า 5 ปี มีความเชี่ยวชาญด้านการพัฒนาโปรแกรมทั้งในส่วน Backend และ Frontend ด้วยภาษา Java, JSP และ Spring Boot มีผลงานโดดเด่นในการพัฒนาโปรเจกต์ที่ซับซ้อน เช่น ระบบจัดการข้อมูลทางการแพทย์และระบบบริหารทรัพยากรบุคคล พร้อมทั้งมีความสามารถในการให้คำปรึกษาและแก้ไขปัญหาให้กับทีมได้อย่างมีประสิทธิภาพ
+                    </p>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-[#003F5C] mb-4 border-b-2 border-[#99B2C8] pb-2">ประสบการณ์ทำงาน</h2>
+                    <div class="space-y-8">
+                        <div class="experience-item">
+                            <h3 class="text-xl font-semibold text-[#003F5C]">Sr. Programmer</h3>
+                            <p class="text-[#34657F]">Entronica Co., Ltd. | พฤษภาคม 2567 – ปัจจุบัน</p>
+                            <ul class="list-disc list-inside text-gray-700 mt-2">
+                                <li>รับผิดชอบงาน Backend โดยใช้ Java Spring Boot ในการพัฒนาและขึ้นระบบใหม่</li>
+                                <li>ทำหน้าที่เป็นที่ปรึกษาให้กับทีม ช่วยเพิ่มประสิทธิภาพการทำงานและแก้ปัญหาได้อย่างรวดเร็ว</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <h3 class="text-xl font-semibold text-[#003F5C]">Project Management Office</h3>
+                            <p class="text-[#34657F]">INTERNATIONAL RESEARCH CORPORATION | พฤศจิกายน 2566 – เมษายน 2567</p>
+                            <ul class="list-disc list-inside text-gray-700 mt-2">
+                                <li>ควบคุมการส่งมอบงานโปรแกรมให้ตรงตามกำหนด และตรวจสอบความถูกต้องของงานอย่างเข้มงวด ช่วยลดความเสี่ยงของความล่าช้าในโปรเจกต์</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <h3 class="text-xl font-semibold text-[#003F5C]">Full Stack Web Developer</h3>
+                            <p class="text-[#34657F]">myHR Corporation Limited | มิถุนายน 2564 – พฤศจิกายน 2566</p>
+                            <ul class="list-disc list-inside text-gray-700 mt-2">
+                                <li>พัฒนาและออกแบบระบบบริหารจัดการทรัพยากรบุคคล (HRM) ทั้งส่วน Backend และ Frontend ด้วย JSP, AngularJS และ JavaScript</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <h3 class="text-xl font-semibold text-[#003F5C]">Programmer</h3>
+                            <p class="text-[#34657F]">บริษัท สุพรีมโพดักซ์ จำกัด | ธันวาคม 2561 – พฤษภาคม 2564</p>
+                            <ul class="list-disc list-inside text-gray-700 mt-2">
+                                <li>พัฒนาโปรแกรมดูกล้องในรถพยาบาล, โปรแกรมเรียกคิว, โปรแกรม Tele Phama</li>
+                                <li>ช่วยให้แพทย์และทีมงานสามารถประเมินสถานการณ์และให้บริการได้อย่างแม่นยำและรวดเร็ว</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <h3 class="text-xl font-semibold text-[#003F5C]">เจ้าหน้าที่ธุรการ</h3>
+                            <p class="text-[#34657F]">วิทยาลัยพณิชยการธนบุรี | พฤษภาคม 2560 – พฤศจิกายน 2561</p>
+                            <ul class="list-disc list-inside text-gray-700 mt-2">
+                                <li>ทำหน้าที่เป็น IT Support และดูแลงานวิจัย พร้อมจัดทำเอกสารราชการ</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <h3 class="text-xl font-semibold text-[#003F5C]">เจ้าหน้าที่แนะนำสินเชื่อ</h3>
+                            <p class="text-[#34657F]">ธนาคารไทยเครดิตเพื่อรายย่อย | มีนาคม 2559 – เมษายน 2560</p>
+                            <ul class="list-disc list-inside text-gray-700 mt-2">
+                                <li>แนะนำผลิตภัณฑ์สินเชื่อและบริหารจัดการหนี้ ทำให้มีประสบการณ์ด้านการสื่อสารกับลูกค้า</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-</body>
 
+</body>
 </html>
