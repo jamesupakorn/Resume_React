@@ -4,7 +4,7 @@ const fs = require('fs');
 
 (async () => {
   // สร้าง absolute path ไปยังไฟล์ HTML
-  const filePath = path.resolve(__dirname, 'public', 'Resume Supakorn(EN).html');
+  const filePath = path.resolve(__dirname, 'public', 'Resume Supakorn(TH).html');
   const fileUrl = 'file://' + filePath;
 
   // ฟังก์ชันหา Chrome/Chromium อัตโนมัติ
