@@ -1,0 +1,179 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- UNIVERSAL PREAMBLE BLOCK ---
+% Setup Geometry, Font, and Color
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor} % Required for color definitions
+\usepackage{parskip} % To remove paragraph indentation and add space between paragraphs
+\usepackage{enumitem} % For custom list formatting
+\usepackage{tabularx} % For the skills table
+\usepackage{booktabs} % For better tables
+\usepackage{hyperref} % For hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    pdfborder={0 0 0}
+}
+
+% ปรับระยะห่างของรายการให้กระชับลง (Adjust list spacing)
+\setlist[itemize]{label={--}, leftmargin=*, itemsep=0.3em, parsep=0.1em} 
+
+% Color Definitions (Professional Blue/Grey theme)
+\definecolor{primaryblue}{RGB}{0, 100, 148}
+\definecolor{linecolor}{RGB}{200, 200, 200}
+
+% Language and Font Setup for English
+\usepackage[english, bidi=basic, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{english}
+\babelfont{rm}{Noto Sans} 
+
+% Custom command for consistent section title formatting
+\newcommand{\sectiontitle}[1]{
+    \vspace{1em}
+    % Title is Large, bold, sans serif, and primary blue
+    {\Large\bfseries\sffamily\color{primaryblue} #1} 
+    \vspace{0.3em}
+    \hrule height 2pt depth 0pt width \textwidth \color{linecolor}
+    \hrule height 1pt depth 0pt width \textwidth
+    \vspace{0.7em}
+}
+
+% Custom command for job entry to clearly separate role and company/duration
+\newcommand{\jobentry}[3]{
+    \vspace{0.7em} % Add space between job entries
+    % Ensure job title is bold
+    \textbf{\color{black}#1} | #2 \hfill \emph{#3}
+}
+
+\begin{document}
+\thispagestyle{empty} % No page number on the first page
+
+% --------------------
+% HEADER - Name and Title
+% --------------------
+\begin{center}
+    {\Huge\bfseries\sffamily Supakorn Raengkasiwit} \\
+    \vspace{0.2em}
+    {\Large\sffamily Sr. Programmer / Full Stack Developer}
+\end{center}
+
+\vspace{1em}
+
+% --------------------
+% CONTACT INFORMATION (Ensuring text is black and readable)
+% --------------------
+\sectiontitle{Contact Information}
+
+\begin{flushleft}
+    % Explicitly setting text color to black for high contrast (though usually default)
+    \color{black}
+    	\textbf{Phone:} 093-772-0044 \hfill \textbf{Email:} jamesupakorn@hotmail.com \\
+    \vspace{0.1em} % Add space between rows
+    	\textbf{Line ID:} @manofmoon \hfill \textbf{Online Portfolio:} \href{https://jamesupakorn.github.io/Resume_React}{jamesupakorn.github.io/Resume\_React} \\
+\end{flushleft}
+
+
+% --------------------
+% PROFILE SUMMARY (Ensuring text is black and readable)
+% --------------------
+\sectiontitle{Profile Summary}
+
+\color{black}
+A skilled programmer with \textbf{5+ years} of comprehensive experience in both Backend and Frontend development, specializing in \textbf{Java, JSP (JavaServer Pages),} and \textbf{Spring Boot}. Driven by a passion for coding since college, I consistently deliver high-quality and efficient results. Proven ability to develop complex projects, such as medical data management and Human Resource Management (HRM) systems, coupled with strong skills in providing technical consultation and effective problem-solving for development teams.
+
+% --------------------
+% WORK EXPERIENCE (Ensuring text is black and readable)
+% --------------------
+\sectiontitle{Work Experience}
+\color{black}
+
+\jobentry{Sr. Programmer}{Entronica Co., Ltd.}{May 2024 - Present}
+\begin{itemize}
+    \item \textbf{Developer Role:} Led the design and development of Backend systems using \textbf{Java Spring Boot} for new API development and system implementation to support complex operations.
+    \item \textbf{Backup Consultant Role:} Acted as a technical consultant for the team, analyzing complex technical issues to ensure rapid problem-solving and enhance overall team productivity.
+\end{itemize}
+\vspace{0.5em} 
+
+\jobentry{Project Management Office}{INTERNATIONAL RESEARCH CORPORATION}{November 2023 - April 2024}
+\begin{itemize}
+    \item Oversaw and controlled software delivery to meet deadlines and ensured rigorous quality assurance.
+    \item \textbf{Coordination Role:} Served as the central liaison between \textbf{Vendors and Clients}, facilitating communication and coordination to ensure all project phases proceeded smoothly and met the requirements of both parties, significantly \textbf{reducing the risk} of project delays.
+\end{itemize}
+\vspace{0.6em}
+
+\jobentry{Full Stack Web Developer}{myHR Corporation Limited}{June 2021 - November 2026}
+\begin{itemize}
+    \item Developed and designed the HRM (Human Resource Management) system, covering both Backend and Frontend.
+    \item \textbf{System Design \& Coordination:} Collaborated with the Presale team to gather requirements and refine the system based on User/Client needs. Involved in preliminary \textbf{UX/UI design} and \textbf{database design/maintenance} for system efficiency.
+    \item \textbf{Technology \& CSC Framework:} Utilized \textbf{JSP (JavaServer Pages), AngularJS,} and \textbf{JavaScript} with \textbf{CSCframerwork} (a proprietary in-house MVC framework).
+    \item \textbf{Database Model Architecture (XML):} Leveraged \textbf{Java with XML}, using \textbf{XML files} to define the \textbf{DB Schema} and \textbf{Models}. This architecture served as the middleware linking the Frontend and Backend to the \textbf{PostgreSQL} database.
+\end{itemize}
+\vspace{0.5em}
+
+\jobentry{Programmer}{Supreme Produx Co., Ltd.}{December 2018 - May 2021}
+\begin{itemize}
+    \item \textbf{System Design \& Client Management:} Contributed to \textbf{UX/UI design}, database management, and gathered requirements directly from clients \textbf{on-site} to align the system with real-world operational needs.
+    \item \textbf{Ambulance Camera Monitoring Program:} Developed a system using \textbf{C\#/.NET Framework} to display \textbf{Real-time} data (camera, GPS, vital signs), enabling precise assessment by emergency teams.
+    \item \textbf{Queue Management Program:} Created a patient queue system with urgency prioritization and audio/visual alerts to reduce hospital wait times.
+    \item \textbf{Tele Pharma Program:} Built a video-call platform for pharmacists to transmit patient/medication data between hospitals, ensuring accurate consultations.
+    \item \textbf{EMS Bot \& Chatbot Program:} Developed video communication and automated chatbot systems (text/voice) to expand user communication channels.
+\end{itemize}
+\vspace{0.5em}
+
+\jobentry{Administrative Officer / IT Support}{Thonburi Commercial College}{May 2017 - November 2018}
+\begin{itemize}
+    \item Served as \textbf{IT Support} for 6 months before transitioning to managing research projects and official documentation, enhancing administrative skills.
+\end{itemize}
+\vspace{0.5em}
+
+\jobentry{Loan Officer}{Thai Credit Retail Bank}{March 2016 - April 2017}
+\begin{itemize}
+    \item Advised on loan products and managed debt portfolios, gaining experience in \textbf{customer communication, persuasion,} and relationship management.
+\end{itemize}
+\vspace{0.5em}
+
+% --------------------
+% TECHNICAL SKILLS (Using tabularx for better alignment and visibility)
+% --------------------
+\sectiontitle{Technical Skills}
+\color{black}
+
+\begin{tabularx}{\textwidth}{@{} l >{\raggedright\arraybackslash}X @{}}
+    \toprule % Top line for clarity
+    \textbf{Category} & \textbf{Skills} \\
+    \midrule % Mid line
+    \textbf{Expert} & Java, JSP (JavaServer Pages), JavaScript, HTML5, CSS, Bootstrap \\[0.3em]
+    \textbf{Intermediate} & Spring Boot, C\#/.NET Framework, React \\[0.3em]
+    \textbf{Basic} & Python, NET Core MVC, AngularJS, React Native \\[0.3em]
+    \textbf{Databases} & SQL, MySQL, \textbf{PostgreSQL}, Oracle \\[0.3em]
+    \textbf{Tools} & Git, Adobe Photoshop, Adobe Illustrator (for UX/UI design) \\
+    \bottomrule % Bottom line
+\end{tabularx}
+
+
+% --------------------
+% SOFT SKILLS (Ensuring text is black and readable)
+% --------------------
+\sectiontitle{Soft Skills}
+\color{black}
+\begin{itemize}
+    \item \textbf{Problem-Solving \& Consultation:} Ability to analyze and resolve complex issues quickly, serving as a reliable technical consultant for the team (Sr. Programmer).
+    \item \textbf{Communication \& Client Management:} Strong interpersonal skills, cheerful, excellent team collaboration, and proven experience in client communication, persuasion, and relationship management.
+    \item \textbf{Attitude:} Quick Learner, Patient.
+\end{itemize}
+
+% --------------------
+% EDUCATION (Ensuring text is black and readable)
+% --------------------
+\sectiontitle{Education}
+\color{black}
+\begin{itemize}
+    \item \textbf{Bachelor’s Degree (2016-2018):} Information System | Rajamangala University of Technology Phra Nakhon
+    \item \textbf{Higher Vocational Certificate (HVC) (2014-2016):} Business Computer | Thonburi Commercial College
+    \item \textbf{Vocational Certificate (VC) (2011-2014):} Business Computer | Thonburi Commercial College
+    \item \textbf{Lower Secondary School (2008-2011):} Pothisarnpittayakorn School
+\end{itemize}
+
+\end{document}
