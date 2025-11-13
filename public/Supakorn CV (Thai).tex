@@ -1,0 +1,183 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- UNIVERSAL PREAMBLE BLOCK ---
+% Setup Geometry, Font, and Color
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor} % Required for color definitions
+\usepackage{parskip} % To remove paragraph indentation and add space between paragraphs
+\usepackage{enumitem} % For custom list formatting
+\usepackage{tabularx} % For the skills table
+\usepackage{booktabs} % For better tables
+\usepackage{hyperref} % For hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    pdfborder={0 0 0}
+}
+
+% ปรับระยะห่างของรายการให้กระชับลง (Adjust list spacing)
+\setlist[itemize]{label={--}, leftmargin=*, itemsep=0.3em, parsep=0.1em} 
+
+% Color Definitions (Professional Blue/Grey theme)
+\definecolor{primaryblue}{RGB}{0, 100, 148}
+\definecolor{linecolor}{RGB}{200, 200, 200}
+
+% Language and Font Setup for Thai (use polyglossia for better XeLaTeX support)
+\usepackage{polyglossia}
+\setmainlanguage{thai}
+\setotherlanguage{english}
+\newfontfamily\thaifont[Scale=1.2, BoldFont=TH Sarabun New Bold, ItalicFont=TH Sarabun New Italic, BoldItalicFont=TH Sarabun New Bold Italic]{TH Sarabun New}
+\newfontfamily\thaifontsf[Scale=1.2, BoldFont=TH Sarabun New Bold, ItalicFont=TH Sarabun New Italic, BoldItalicFont=TH Sarabun New Bold Italic]{TH Sarabun New}
+\setmainfont[Scale=1.2, BoldFont=TH Sarabun New Bold, ItalicFont=TH Sarabun New Italic, BoldItalicFont=TH Sarabun New Bold Italic]{TH Sarabun New}
+\setsansfont[Scale=1.2, BoldFont=TH Sarabun New Bold, ItalicFont=TH Sarabun New Italic, BoldItalicFont=TH Sarabun New Bold Italic]{TH Sarabun New}
+
+% Custom command for consistent section title formatting
+\newcommand{\sectiontitle}[1]{
+    \vspace{1em}
+    % Title is Large, bold, sans serif, and primary blue
+    {\Large\bfseries\sffamily\color{primaryblue} #1} 
+    \vspace{0.3em}
+    \hrule height 2pt depth 0pt width \textwidth \color{linecolor}
+    \hrule height 1pt depth 0pt width \textwidth
+    \vspace{0.7em}
+}
+
+% Custom command for job entry to clearly separate role and company/duration
+\newcommand{\jobentry}[3]{
+    \vspace{0.7em} % Add space between job entries
+    % Ensure job title is bold
+    \textbf{\color{black}#1} | #2 \hfill \emph{#3}
+}
+
+\begin{document}
+\thispagestyle{empty} % No page number on the first page
+
+% --------------------
+% HEADER - Name and Title
+% --------------------
+\begin{center}
+    {\Huge\bfseries\sffamily ศุภกร แรงกสิวิทย์} \\
+    \vspace{0.2em}
+    {\Large\sffamily โปรแกรมเมอร์อาวุโส / Full Stack Developer}
+\end{center}
+
+\vspace{1em}
+
+% --------------------
+% CONTACT INFORMATION (Ensuring text is black and readable)
+% --------------------
+\sectiontitle{ข้อมูลติดต่อ}
+
+\begin{flushleft}
+    % Explicitly setting text color to black for high contrast (though usually default)
+    \color{black}
+    	\textbf{โทรศัพท์:} 093-772-0044 \hfill \textbf{อีเมล:} jamesupakorn@hotmail.com \\
+    \vspace{0.1em} % Add space between rows
+    \textbf{Line ID:} @manofmoon \hfill \textbf{ผลงานออนไลน์:} \href{https://jamesupakorn.github.io/Resume_React}{jamesupakorn.github.io/Resume\_React} \\
+\end{flushleft}
+
+
+% --------------------
+% PROFILE SUMMARY (Ensuring text is black and readable)
+% --------------------
+\sectiontitle{สรุปประวัติ}
+
+\color{black}
+โปรแกรมเมอร์ที่มีทักษะและประสบการณ์ \textbf{มากกว่า 5 ปี} ในการพัฒนาทั้ง Backend และ Frontend โดยเชี่ยวชาญใน \textbf{Java, JSP (JavaServer Pages),} และ \textbf{Spring Boot} มีความหลงใหลในการเขียนโค้ดตั้งแต่สมัยศึกษาในวิทยาลัย และมุ่งมั่นในการส่งมอบผลงานที่มีคุณภาพและมีประสิทธิภาพสูง มีความสามารถในการพัฒนาโปรเจกต์ที่ซับซ้อน เช่น ระบบจัดการข้อมูลทางการแพทย์และระบบ Human Resource Management (HRM) พร้อมทั้งมีทักษะที่แข็งแกร่งในการให้คำปรึกษาทางเทคนิคและแก้ไขปัญหาอย่างมีประสิทธิภาพสำหรับทีมพัฒนา
+
+% --------------------
+% WORK EXPERIENCE (Ensuring text is black and readable)
+% --------------------
+\sectiontitle{ประสบการณ์การทำงาน}
+\color{black}
+
+\jobentry{โปรแกรมเมอร์อาวุโส}{บริษัท เอ็นโทรนิก้า จำกัด}{พฤษภาคม 2567 - ปัจจุบัน}
+\begin{itemize}
+    \item \textbf{บทบาทนักพัฒนา:} เป็นผู้นำในการออกแบบและพัฒนาระบบ Backend โดยใช้ \textbf{Java Spring Boot} สำหรับการพัฒนา API ใหม่และการใช้งานระบบเพื่อรองรับการดำเนินงานที่ซับซ้อน
+    \item \textbf{บทบาทที่ปรึกษาสำรอง:} ทำหน้าที่เป็นที่ปรึกษาทางเทคนิคสำหรับทีม วิเคราะห์และแก้ไขปัญหาทางเทคนิคที่ซับซ้อนอย่างรวดเร็ว เพิ่มประสิทธิภาพโดยรวมของทีม
+\end{itemize}
+\vspace{0.5em} 
+
+\jobentry{สำนักงานบริหารโครงการ}{บริษัท อินเตอร์เนชั่นแนล รีเสิร์ช คอร์ปอเรชั่น จำกัด}{พฤศจิกายน 2566 - เมษายน 2567}
+\begin{itemize}
+    \item ดูแลและควบคุมการส่งมอบซอฟต์แวร์ให้ตรงตามกำหนดเวลาและมั่นใจในการประกันคุณภาพอย่างเข้มงวด
+    \item \textbf{บทบาทการประสานงาน:} ทำหน้าที่เป็นศูนย์กลางเชื่อมต่อระหว่าง \textbf{ผู้ขายและลูกค้า} อำนวยความสะดวกในการสื่อสารและประสานงาน เพื่อให้โครงการดำเนินไปอย่างราบรื่นและตรงตามความต้องการของทั้งสองฝ่าย \textbf{ลดความเสี่ยง}ของความล่าช้าในโครงการ
+\end{itemize}
+\vspace{0.5em}
+
+\jobentry{นักพัฒนาเว็บ Full Stack}{บริษัท มายเอชอาร์ คอร์ปอเรชั่น จำกัด}{มิถุนายน 2564 - พฤศจิกายน 2566}
+\begin{itemize}
+    \item พัฒนาและออกแบบระบบ HRM (Human Resource Management) ครอบคลุมทั้ง Backend และ Frontend
+    \item \textbf{การออกแบบระบบและการประสานงาน:} ร่วมมือกับทีม Presale เพื่อรวบรวมความต้องการและปรับแต่งระบบตามความต้องการของผู้ใช้/ลูกค้า มีส่วนร่วมในการ\textbf{ออกแบบ UX/UI} เบื้องต้นและ\textbf{การออกแบบ/บำรุงรักษาฐานข้อมูล}เพื่อประสิทธิภาพของระบบ
+    \item \textbf{เทคโนโลยีและ CSC Framework:} ใช้ \textbf{JSP (JavaServer Pages), AngularJS,} และ \textbf{JavaScript} กับ \textbf{CSCframework} (เฟรมเวิร์ก MVC ภายในองค์กร)
+    \item \textbf{สถาปัตยกรรมโมเดลฐานข้อมูล (XML):} ใช้ประโยชน์จาก \textbf{Java กับ XML} โดยใช้ \textbf{ไฟล์ XML} เพื่อกำหนด \textbf{DB Schema} และ \textbf{Models} สถาปัตยกรรมนี้ทำหน้าที่เป็น middleware ที่เชื่อมโยง Frontend และ Backend เข้ากับฐานข้อมูล \textbf{PostgreSQL}
+\end{itemize}
+\vspace{0.5em}
+
+\jobentry{โปรแกรมเมอร์}{บริษัท ซูพรีม โปรดักซ์ จำกัด}{ธันวาคม 2561 - พฤษภาคม 2564}
+\begin{itemize}
+    \item \textbf{การออกแบบระบบและการจัดการลูกค้า:} มีส่วนร่วมในการ\textbf{ออกแบบ UX/UI} การจัดการฐานข้อมูล และรวบรวมความต้องการโดยตรงจากลูกค้า\textbf{ในพื้นที่}เพื่อจัดการระบบให้สอดคล้องกับความต้องการในการดำเนินงานจริง
+    \item \textbf{โปรแกรมตรวจสอบกล้องรถพยาบาล:} พัฒนาระบบโดยใช้ \textbf{C\#/.NET Framework} เพื่อแสดงข้อมูล\textbf{แบบเรียลไทม์} (กล้อง GPS สัญญาณชีพ) เพื่อให้ทีมฉุกเฉินสามารถประเมินได้อย่างแม่นยำ
+    \item \textbf{โปรแกรมจัดการคิว:} สร้างระบบคิวผู้ป่วยที่มีการจัดลำดับความเร่งด่วนและการแจ้งเตือนด้วยเสียง/ภาพเพื่อลดเวลารอคอยในโรงพยาบาล
+    \item \textbf{โปรแกรม Tele Pharma:} สร้างแพลตฟอร์มวิดีโอคอลสำหรับเภสัชกรเพื่อส่งข้อมูลผู้ป่วย/ยาระหว่างโรงพยาบาล เพื่อให้แน่ใจว่าการให้คำปรึกษาถูกต้องแม่นยำ
+    \item \textbf{โปรแกรม EMS Bot และ Chatbot:} พัฒนาระบบสื่อสารวิดีโอและระบบแชทบอทอัตโนมัติ (ข้อความ/เสียง) เพื่อขยายช่องทางการสื่อสารของผู้ใช้
+\end{itemize}
+\vspace{0.5em}
+
+\jobentry{เจ้าหน้าที่ธุรการ / ฝ่ายสนับสนุนด้านไอที}{วิทยาลัยพณิชยการธนบุรี}{พฤษภาคม 2560 - พฤศจิกายน 2561}
+\begin{itemize}
+    \item ทำหน้าที่\textbf{สนับสนุนด้านไอที}เป็นเวลา 6 เดือนก่อนเปลี่ยนไปบริหารจัดการโครงการวิจัยและเอกสารราชการ ยกระดับทักษะด้านการบริหาร
+\end{itemize}
+\vspace{0.5em}
+
+\jobentry{เจ้าหน้าที่สินเชื่อ}{ธนาคารไทยเครดิต เพื่อรายย่อย จำกัด (มหาชน)}{มีนาคม 2559 - เมษายน 2560}
+\begin{itemize}
+    \item ให้คำปรึกษาผลิตภัณฑ์สินเชื่อและจัดการพอร์ต ได้รับประสบการณ์ใน\textbf{การสื่อสารกับลูกค้า การโน้มน้าวใจ}และการจัดการความสัมพันธ์
+\end{itemize}
+\vspace{0.5em}
+
+% --------------------
+% TECHNICAL SKILLS (Using tabularx for better alignment and visibility)
+% --------------------
+\sectiontitle{ทักษะทางเทคนิค}
+\color{black}
+
+\begin{tabularx}{\textwidth}{@{} l >{\raggedright\arraybackslash}X @{}}
+    \toprule % Top line for clarity
+    \textbf{หมวดหมู่} & \textbf{ทักษะ} \\
+    \midrule % Mid line
+    \textbf{ระดับเชี่ยวชาญ} & Java, JSP (JavaServer Pages), JavaScript, HTML5, CSS, Bootstrap \\[0.3em]
+    \textbf{ระดับกลาง} & Spring Boot, C\#/.NET Framework, React \\[0.3em]
+    \textbf{ระดับพื้นฐาน} & Python, NET Core MVC, AngularJS, React Native \\[0.3em]
+    \textbf{ฐานข้อมูล} & SQL, MySQL, \textbf{PostgreSQL}, Oracle \\[0.3em]
+    \textbf{เครื่องมือ} & Git, Adobe Photoshop, Adobe Illustrator (สำหรับการออกแบบ UX/UI) \\
+    \bottomrule % Bottom line
+\end{tabularx}
+
+
+% --------------------
+% SOFT SKILLS (Ensuring text is black and readable)
+% --------------------
+\sectiontitle{ทักษะส่วนบุคคล}
+\color{black}
+\begin{itemize}
+    \item \textbf{การแก้ปัญหาและการให้คำปรึกษา:} ความสามารถในการวิเคราะห์และแก้ไขปัญหาที่ซับซ้อนอย่างรวดเร็ว ทำหน้าที่เป็นที่ปรึกษาทางเทคนิคที่เชื่อถือได้สำหรับทีม (โปรแกรมเมอร์อาวุโส)
+    \item \textbf{การสื่อสารและการจัดการลูกค้า:} ทักษะการสื่อสารระหว่างบุคคลที่แข็งแกร่ง มีความร่าเริง ทำงานร่วมกับทีมได้ดีเยี่ยม และมีประสบการณ์ที่พิสูจน์แล้วในการสื่อสารกับลูกค้า การโน้มน้าวใจ และการจัดการความสัมพันธ์
+    \item \textbf{ทัศนคติ:} เรียนรู้เร็ว มีความอดทน
+\end{itemize}
+
+% --------------------
+% EDUCATION (Ensuring text is black and readable)
+% --------------------
+\sectiontitle{การศึกษา}
+\color{black}
+\begin{itemize}
+    \item \textbf{ปริญญาตรี (2559-2561):} ระบบสารสนเทศ | มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร
+    \item \textbf{ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) (2557-2559):} คอมพิวเตอร์ธุรกิจ | วิทยาลัยพณิชยการธนบุรี
+    \item \textbf{ประกาศนียบัตรวิชาชีพ (ปวช.) (2554-2557):} คอมพิวเตอร์ธุรกิจ | วิทยาลัยพณิชยการธนบุรี
+    \item \textbf{มัธยมศึกษาตอนต้น (2551-2554):} โรงเรียนโพธิสารพิทยากร
+\end{itemize}
+
+\end{document}

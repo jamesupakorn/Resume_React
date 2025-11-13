@@ -4,8 +4,8 @@ const PreviewResumeButton = ({ lang }) => {
   // Path to resume html in public folder
   const base = import.meta.env.BASE_URL || "/";
   const fileName = lang === "th"
-    ? "Resume Supakorn(TH).pdf"
-    : "Resume Supakorn(EN).pdf";
+    ? "Supakorn CV (Thai).pdf"
+    : "Supakorn CV (English).pdf";
   const url = `${base}${fileName}`;
 
   const handlePreview = () => {

@@ -95,15 +95,24 @@ const CardWorkEx = () => {
           {(() => {
             const desc = _t(modalContent.detail || "");
             // แยกแต่ละหัวข้อย่อยที่ขึ้นต้นด้วย - ออกมาเป็นบรรทัดใหม่ พร้อม tab
-            return desc.split(/-\s+/).map((item, idx) =>
-              idx === 0 && !desc.trim().startsWith('-') ? (
-                <span key={idx}>{item.trim()}</span>
-              ) : (
-                <div key={idx} style={{ textIndent: '2em', marginTop: 4 }}>
-                  - {item.trim()}
-                </div>
-              )
-            );
+            return desc.split(/\n/).map((line, idx) => {
+              const trimmed = line.trim();
+              if (!trimmed) return null;
+              
+              if (trimmed.startsWith('-')) {
+                return (
+                  <div key={idx} style={{ textIndent: '2em', marginTop: 4 }}>
+                    {trimmed}
+                  </div>
+                );
+              } else {
+                return (
+                  <div key={idx} style={{ marginTop: idx > 0 ? 8 : 0 }}>
+                    {trimmed}
+                  </div>
+                );
+              }
+            }).filter(Boolean);
           })()}
         </div>
       </Modal>
