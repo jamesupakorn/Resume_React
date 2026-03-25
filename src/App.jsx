@@ -13,11 +13,13 @@ import HeadPage from "./HeadPage";
 import "./i18n";
 import useIsMobile from "./Components/useIsMobile";
 import ScrollButton from "./Components/BtnScrollUp";
+
 import Personal from "./Components/Personal";
 import StudyHis from "./Components/StudyHis";
 import WorkEx from "./Components/WorkEx";
 import Other from "./Components/Other";
 import Chatbot from "./Components/Chatbot";
+import Resume3D from "./Components/Resume3D";
 import "./CSS/Chatbot.css";
 import "./CSS/ChatbotAvatarFix.css";
 
@@ -32,6 +34,16 @@ export default function App() {
   return (
     <div className="App">
       <HeadPage isMobile={isMobile} />
+      {/* Interactive Resume 3D Section */}
+      <div id="section-interactive-resume" className="section-margin">
+        <div className="section-card section-interactive-resume">
+          <h2 className="section-header">
+            <StarOutlined className="section-icon" />
+            Interactive Resume 3D
+          </h2>
+          <Resume3D />
+        </div>
+      </div>
       {/* Personal Section */}
       <div id="section-personal" className="section-margin">
         <div className="section-card section-personal">
