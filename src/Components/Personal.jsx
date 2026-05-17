@@ -1,10 +1,8 @@
-// ...existing code...
-import "../CSS/Body.css";
 import CardPersonal from "./Card/CardPersonal";
 
 const Personal = (props) => {
   return (
-    <div className="Personal body">
+    <div>
       <CardPersonal isMobile={props.isMobile} />
     </div>
   );

@@ -1,12 +1,9 @@
-// ...existing code...
-import "../CSS/Body.css";
 import CardWorkEx from "./Card/CardWorkEx";
 
 const WorkEx = (props) => {
   return (
-    <div className="Personal body">
+    <div>
       <CardWorkEx isMobile={props.isMobile} />
-      <br />
     </div>
   );
 };

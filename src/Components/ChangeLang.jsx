@@ -5,12 +5,12 @@ import { Col, Row, Select } from "antd";
 
 const langChange = (selectedLanguage) => {
   try {
-    //console.log(selectedLanguage);
     i18n.changeLanguage(selectedLanguage);
   } catch (error) {
     console.error("Error occurred while changing language:", error);
   }
 };
+
 const ChangeLang = (props) => {
   const _translation = useTranslation();
   const _t = _translation.t;
@@ -20,8 +20,8 @@ const ChangeLang = (props) => {
       <Col span={props.isMobile ? 24 : 8}>
         <Row className="lang-row-right">
           <p className="txtLang">{_t("Lang")} :</p>
-        <Select
-          defaultValue="en"
+          <Select
+            defaultValue="en"
             className="selectLang selectLang-center"
             onChange={(value) => langChange(value)}
             options={[

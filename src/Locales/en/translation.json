@@ -12,7 +12,8 @@
     "Personal": "Personal Profile",
     "Study": "Educational Profile",
     "Work": "Work Profile",
-    "Other": "Other Profile"
+    "Other": "Skills",
+    "Interactive3D": "Interactive Resume 3D"
   },
   "Lang": "Language",
   "Skill": {
@@ -47,7 +48,12 @@
     "SchoolPrimary": "Wat Maprao Tia School",
     "SchoolJunior": "Photisarn Pittayakorn School",
     "SchoolVocational": "Thonburi Commercial College",
-    "SchoolBachelor": "Rajamangala University of Technology Phra Nakhon"
+    "SchoolBachelor": "Rajamangala University of Technology Phra Nakhon",
+    "Year1": "2008",
+    "Year2": "2008–2011",
+    "Year3": "2011–2014",
+    "Year4": "2014–2016",
+    "Year5": "2016–2018"
   },
   "Personal": {
     "Personal": "Personal Information",
@@ -62,6 +68,9 @@
     "cm": "cm",
     "kg": "kg",
     "Year": "Year",
+    "HeightValue": "173",
+    "WeightValue": "56",
+    "AgeValue": "30",
     "addReal": "333/1  Moo 2, Bang Bua Thong Subdistrict, Bang Bua Thong District, Nonthaburi Province 11110"
   },
   "WorkEx": {

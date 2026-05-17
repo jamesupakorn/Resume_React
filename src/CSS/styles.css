@@ -15,24 +15,23 @@ body {
   padding: 2rem 1rem;
 }
 
-span {
-  font-size: 1.08rem;
-}
-
 .BtnScrollUp {
   position: fixed;
-  width: 3.5rem;
-  bottom: 40px;
-  height: 2rem;
-  font-size: 3rem;
-  left: 92%;
-  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+  bottom: 80px;
+  right: 24px;
+  z-index: 1000;
+  font-size: 2.2rem;
   color: #6fcf97;
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 2px 8px 0 rgba(111, 207, 151, 0.15);
   border: 1px solid #b2dfdb;
   transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .BtnScrollUp:hover {
   background: #e0f2f1;

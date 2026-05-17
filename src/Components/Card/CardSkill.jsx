@@ -1,167 +1,45 @@
 import { Card, Row, Col, Progress } from "antd";
 import { useTranslation } from "react-i18next";
 
-const CardSkill = () => {
+const CardSkill = ({ isMobile }) => {
   const _translation = useTranslation();
   const _t = _translation.t;
+  const nameSpan = isMobile ? 12 : 6;
+  const levelSpan = isMobile ? 12 : 6;
+  const progressSpan = isMobile ? 24 : 12;
+  const progressClass = isMobile ? "col-center col-mobile-margin" : "col-center";
+
+  const skills = [
+    { key: "Skill.JSP",          level: "Skill.Level4", percent: 80 },
+    { key: "Skill.JavaScript",   level: "Skill.Level4", percent: 80 },
+    { key: "Skill.HTML5",        level: "Skill.Level4", percent: 80 },
+    { key: "Skill.CSS",          level: "Skill.Level4", percent: 80 },
+    { key: "Skill.Bootstrap",    level: "Skill.Level4", percent: 80 },
+    { key: "Skill.Java",         level: "Skill.Level4", percent: 80 },
+    { key: "Skill.CSharpAspNet", level: "Skill.Level3", percent: 60 },
+    { key: "Skill.SpringBoot",   level: "Skill.Level3", percent: 60 },
+    { key: "Skill.React",        level: "Skill.Level3", percent: 60 },
+    { key: "Skill.Python",       level: "Skill.Level1", percent: 20 },
+    { key: "Skill.NetCoreMVC",   level: "Skill.Level1", percent: 20 },
+    { key: "Skill.AngularJS",    level: "Skill.Level1", percent: 20 },
+    { key: "Skill.ReactNative",  level: "Skill.Level1", percent: 20 },
+  ];
+
   return (
-    <Card title={_t("Skill.Skill")} className="resume-card">
-      {/* JSP: เชี่ยวชาญ */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.JSP")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level4")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={80} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* JavaScript: เชี่ยวชาญ */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.JavaScript")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level4")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={80} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* HTML5: เชี่ยวชาญ */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.HTML5")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level4")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={80} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* CSS: เชี่ยวชาญ */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.CSS")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level4")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={80} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* Bootstrap: เชี่ยวชาญ */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Bootstrap")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level4")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={80} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* Java: เชี่ยวชาญ */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Java")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level4")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={80} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* C#/.NET Framework: ระดับกลาง */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.CSharpAspNet")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level3")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={60} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* Spring Boot: ระดับกลาง */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.SpringBoot")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level3")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={60} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* React: ระดับกลาง */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.React")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level3")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={60} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* Python: พื้นฐาน */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Python")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level1")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={20} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* .NET Core MVC: พื้นฐาน */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.NetCoreMVC")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level1")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={20} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* AngularJS: พื้นฐาน */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.AngularJS")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level1")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={20} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
-      {/* React Native: พื้นฐาน */}
-      <Row align="middle">
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.ReactNative")}</p>
-        </Col>
-        <Col span={6} className="col-center">
-          <p>{_t("Skill.Level1")}</p>
-        </Col>
-        <Col span={typeof window !== "undefined" && window.innerWidth <= 600 ? 24 : 12} className={typeof window !== "undefined" && window.innerWidth <= 600 ? "col-center col-mobile-margin" : "col-center"}>
-          <Progress percent={20} strokeColor="#378752" showInfo={false} />
-        </Col>
-      </Row>
+    <Card className="resume-card">
+      {skills.map(({ key, level, percent }) => (
+        <Row key={key} align="middle">
+          <Col span={nameSpan} className="col-center">
+            <p>{_t(key)}</p>
+          </Col>
+          <Col span={levelSpan} className="col-center">
+            <p>{_t(level)}</p>
+          </Col>
+          <Col span={progressSpan} className={progressClass}>
+            <Progress percent={percent} strokeColor="#378752" showInfo={false} />
+          </Col>
+        </Row>
+      ))}
     </Card>
   );
 };

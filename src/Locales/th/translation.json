@@ -12,7 +12,8 @@
     "Personal": "ประวัติส่วนตัว",
     "Study": "ประวัติการศึกษา",
     "Work": "ประวัติการทำงาน",
-    "Other": "ประวัติอื่นๆ"
+    "Other": "ทักษะ",
+    "Interactive3D": "เรซูเม่ 3D เชิงโต้ตอบ"
   },
   "Lang": "ภาษา",
   "Skill": {
@@ -22,17 +23,17 @@
   "Level3": "ระดับสูง",
   "Level2": "ระดับกลาง",
   "Level1": "ระดับพื้นฐาน",
-  "JavaServerPages": "JavaServer Pages (JSP)",
+  "JSP": "JavaServer Pages (JSP)",
   "JavaScript": "JavaScript",
   "HTML5": "HTML5",
   "CSS": "Cascading Style Sheets (CSS)",
   "Bootstrap": "Bootstrap",
   "Java": "Java",
-  "CSharpDotNet": "C#/.NET Framework",
+  "CSharpAspNet": "C#/.NET Framework",
   "SpringBoot": "Spring Boot",
   "React": "React",
   "Python": "Python",
-  "DotNetCoreMVC": ".NET Core MVC",
+  "NetCoreMVC": ".NET Core MVC",
   "AngularJS": "AngularJS",
   "ReactNative": "React Native"
   },
@@ -45,7 +46,12 @@
     "SchoolPrimary": "โรงเรียนวัดมะพร้าวเตี้ย",
     "SchoolJunior": "โรงเรียนโพธิสารพิทยากร",
     "SchoolVocational": "วิทยาลัยพณิชยการธนบุรี",
-    "SchoolBachelor": "มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร"
+    "SchoolBachelor": "มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร",
+    "Year1": "2551",
+    "Year2": "2551–2554",
+    "Year3": "2554–2557",
+    "Year4": "2557–2559",
+    "Year5": "2559–2561"
   },
   "Personal": {
     "Personal": "ข้อมูลส่วนตัว",
@@ -60,6 +66,9 @@
     "cm": "ซ.ม.",
     "kg": "ก.ก.",
     "Year": "ปี",
+    "HeightValue": "173",
+    "WeightValue": "56",
+    "AgeValue": "30",
     "addReal": "333/1 หมู่2 ต.บางบัวทอง อ.บางบัวทอง จ.นนทบุรี 11110"
   },
   "WorkEx": {

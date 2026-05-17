@@ -1,8 +1,7 @@
-import { Card, Timeline, Modal, Button } from "antd";
+import { Card, Timeline, Modal } from "antd";
 import { SolutionOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-
 
 const workExData = [
   {
@@ -43,6 +42,19 @@ const workExData = [
   }
 ];
 
+const renderDescription = (desc) =>
+  desc
+    .split(/\n/)
+    .map((line, idx) => {
+      const trimmed = line.trim();
+      if (!trimmed) return null;
+      if (trimmed.startsWith("-")) {
+        return <div key={idx} className="workex-desc-bullet">{trimmed}</div>;
+      }
+      return <div key={idx} className="workex-desc-line">{trimmed}</div>;
+    })
+    .filter(Boolean);
+
 const CardWorkEx = () => {
   const _translation = useTranslation();
   const _t = _translation.t;
@@ -54,9 +66,9 @@ const CardWorkEx = () => {
     setModalOpen(true);
   };
 
-  const timelineItems = workExData.map((item, idx) => ({
+  const timelineItems = workExData.map((item) => ({
     color: "#7ed957",
-    dot: <SolutionOutlined className="workex-dot-icon" />, 
+    dot: <SolutionOutlined className="workex-dot-icon" />,
     children: (
       <div
         className="workex-timeline-box workex-timeline-box-clickable"
@@ -79,7 +91,7 @@ const CardWorkEx = () => {
 
   return (
     <>
-      <Card title={_t("tabs.Work") || "Work Experience"} className="resume-card">
+      <Card className="resume-card">
         <Timeline className="workex-timeline" mode="left" items={timelineItems} />
       </Card>
       <Modal
@@ -90,30 +102,8 @@ const CardWorkEx = () => {
         title={modalContent.position ? `${_t(modalContent.position)} @ ${_t(modalContent.company)}` : ""}
         className="workex-modal"
       >
-      <br />
-        <div style={{ fontSize: '1.08rem', color: '#35524a', lineHeight: 1.7 }}>
-          {(() => {
-            const desc = _t(modalContent.detail || "");
-            // แยกแต่ละหัวข้อย่อยที่ขึ้นต้นด้วย - ออกมาเป็นบรรทัดใหม่ พร้อม tab
-            return desc.split(/\n/).map((line, idx) => {
-              const trimmed = line.trim();
-              if (!trimmed) return null;
-              
-              if (trimmed.startsWith('-')) {
-                return (
-                  <div key={idx} style={{ textIndent: '2em', marginTop: 4 }}>
-                    {trimmed}
-                  </div>
-                );
-              } else {
-                return (
-                  <div key={idx} style={{ marginTop: idx > 0 ? 8 : 0 }}>
-                    {trimmed}
-                  </div>
-                );
-              }
-            }).filter(Boolean);
-          })()}
+        <div className="workex-modal-body">
+          {renderDescription(_t(modalContent.detail || ""))}
         </div>
       </Modal>
     </>

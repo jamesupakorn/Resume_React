@@ -1,5 +1,5 @@
 import { Image } from "antd";
-const picProfile = (import.meta.env.BASE_URL || "/") + "IMG/PicProfile.jpeg";
+const picProfile = import.meta.env.BASE_URL + "IMG/PicProfile.jpeg";
 import ChangeLang from "./Components/ChangeLang";
 import { useTranslation } from "react-i18next";
 import {
@@ -9,23 +9,18 @@ import {
   RiPhoneFill,
 } from "react-icons/ri";
 import { DownloadOutlined } from "@ant-design/icons";
-import PreviewResumeButton from "./Components/PreviewResumeButton";
 import "./CSS/HeadPage.css";
-import jsPDF from "jspdf";
-import html2pdf from "html2pdf.js";
 
 const HeadPage = (props) => {
   const _translation = useTranslation();
   const _t = _translation.t;
-  // ฟังก์ชันดาวน์โหลด PDF ตรงไฟล์
   const handleDownloadResume = () => {
     const lang = _translation.i18n.language;
-    const base = import.meta.env.BASE_URL || "/";
+    const base = import.meta.env.BASE_URL;
     const fileName = lang === "th"
       ? "Supakorn CV (Thai).pdf"
       : "Supakorn CV (English).pdf";
     const url = base + fileName;
-    // สร้างลิงก์ดาวน์โหลด
     const link = document.createElement("a");
     link.href = url;
     link.download = fileName;
@@ -41,7 +36,7 @@ const HeadPage = (props) => {
       </div>
       <div className="profile-section">
         <Image
-          className={props.isMobile ? "Profile profile-mobile" : "Profile profile-desktop"}
+          className="Profile"
           width={props.isMobile ? 120 : 180}
           src={picProfile}
           alt="Profile"
@@ -54,7 +49,6 @@ const HeadPage = (props) => {
             <DownloadOutlined className={props.isMobile ? "resume-icon-mobile" : "resume-icon-desktop"} />
             {_t("head.download")}
           </button>
-          {/* <PreviewResumeButton lang={_translation.i18n.language} /> */}
         </div>
         <div className="contact-row">
           <div className="contact-item">
@@ -70,7 +64,6 @@ const HeadPage = (props) => {
             href="https://www.facebook.com/SKULLM00N"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
           >
             <RiFacebookCircleFill className="iconSocial icon-facebook" />
             <span>{_t("head.facebook")}</span>
@@ -80,7 +73,6 @@ const HeadPage = (props) => {
             href="https://line.me/ti/p/G2KiH03-Q1"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
           >
             <RiLineFill className="iconSocial icon-line" />
             <span>{_t("head.line")}</span>
@@ -92,4 +84,3 @@ const HeadPage = (props) => {
 };
 
 export default HeadPage;
-// ...existing code...

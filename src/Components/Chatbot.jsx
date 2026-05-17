@@ -2,9 +2,6 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import ChatBot from 'react-simple-chatbot';
 import { useTranslation } from 'react-i18next';
 
-
-
-
 const Greeting = ({ lang }) => (
   <div className="chatbot-greeting">
     {lang === 'th'
@@ -71,10 +68,7 @@ const getSteps = (t, lang) => [
   },
   {
     id: 'edu',
-    message:
-      lang === 'th'
-        ? `${t('StudyHis.Bachelor')}, ${t('StudyHis.SchoolBachelor')}`
-        : `${t('StudyHis.Bachelor')}, ${t('StudyHis.SchoolBachelor')}`,
+    message: `${t('StudyHis.Bachelor')}, ${t('StudyHis.SchoolBachelor')}`,
     trigger: 'ask',
   },
   {
@@ -147,7 +141,7 @@ const Chatbot = () => {
             steps={steps}
             headerTitle={t('chatbotTitle')}
             stepsStartAt={0}
-            botAvatar="/Resume_React/IMG/Moonsan.png"
+            botAvatar={`${import.meta.env.BASE_URL}IMG/Moonsan.png`}
           />
         </div>
       )}

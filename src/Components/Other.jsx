@@ -1,10 +1,8 @@
-// ...existing code...
-import "../CSS/Body.css";
 import CardSkill from "./Card/CardSkill";
 
 const Other = (props) => {
   return (
-    <div className="Other body">
+    <div>
       <CardSkill isMobile={props.isMobile} />
     </div>
   );

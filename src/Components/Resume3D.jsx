@@ -2,8 +2,6 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Text } from '@react-three/drei';
 
-
-// ข้อมูลจาก cv_th.txt (ภาษาไทย)
 const resumeData = {
   name: 'ศุภกร แรงกสิวิทย์',
   job: 'Sr. Programmer / Full Stack Developer',
@@ -29,21 +27,18 @@ const resumeData = {
   ],
 };
 
-
 function Resume3D() {
   return (
-    <Canvas camera={{ position: [0, 0, 12], fov: 50 }} style={{ height: '80vh', width: '100%' }}>
+    <Canvas camera={{ position: [0, 0, 12], fov: 50 }} className="resume3d-canvas">
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <OrbitControls />
-      {/* ชื่อและตำแหน่งงาน */}
       <Text position={[0, 3, 0]} fontSize={0.6} color="navy" anchorX="center" anchorY="middle">
         {resumeData.name}
       </Text>
       <Text position={[0, 2.2, 0]} fontSize={0.35} color="darkslateblue" anchorX="center" anchorY="middle">
         {resumeData.job}
       </Text>
-      {/* ข้อมูลติดต่อ */}
       <Text position={[-3.5, 1.2, 0]} fontSize={0.22} color="black" maxWidth={4}>
         โทร: {resumeData.contact.phone}
       </Text>
@@ -56,11 +51,9 @@ function Resume3D() {
       <Text position={[-3.5, 0, 0]} fontSize={0.22} color="black" maxWidth={4}>
         ผลงาน: {resumeData.contact.website}
       </Text>
-      {/* สรุปโปรไฟล์ */}
       <Text position={[2.5, 1, 0]} fontSize={0.21} color="#444" maxWidth={5}>
         {resumeData.profile}
       </Text>
-      {/* ทักษะ */}
       <Text position={[-3.5, -0.8, 0]} fontSize={0.23} color="teal" maxWidth={4}>
         ทักษะเชี่ยวชาญ:\n- {resumeData.skills.expert.join("\n- ")}
       </Text>
@@ -76,7 +69,6 @@ function Resume3D() {
       <Text position={[-3.5, -2.6, 0]} fontSize={0.21} color="teal" maxWidth={4}>
         เครื่องมือ: {resumeData.skills.tools.join(", ")}
       </Text>
-      {/* การศึกษา */}
       <Text position={[2.5, -0.8, 0]} fontSize={0.22} color="#2d5" maxWidth={5}>
         การศึกษา:\n{resumeData.education.map(e => `${e.degree} (${e.year}): ${e.field ? e.field + ' | ' : ''}${e.school}`).join("\n")}
       </Text>
