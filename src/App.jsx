@@ -22,13 +22,11 @@ import "./CSS/Chatbot.css";
 import "./CSS/ChatbotAvatarFix.css";
 
 export default function App() {
-  const _translation = useTranslation();
-  const _t = _translation.t;
+  const { t: _t } = useTranslation();
   const isMobile = useIsMobile();
   return (
     <div className="App">
       <HeadPage isMobile={isMobile} />
-      {/* Interactive Resume 3D Section */}
       <div id="section-interactive-resume">
         <div className="section-card section-interactive-resume">
           <h2 className="section-header">
@@ -38,7 +36,6 @@ export default function App() {
           <Resume3D />
         </div>
       </div>
-      {/* Personal Section */}
       <div id="section-personal">
         <div className="section-card section-personal">
           <h2 className="section-header">
@@ -48,7 +45,6 @@ export default function App() {
           <Personal isMobile={isMobile} />
         </div>
       </div>
-      {/* Study History Section */}
       <div id="section-education">
         <div className="section-card section-education">
           <h2 className="section-header">
@@ -58,7 +54,6 @@ export default function App() {
           <StudyHis isMobile={isMobile} />
         </div>
       </div>
-      {/* Work Experience Section */}
       <div id="section-work">
         <div className="section-card section-work">
           <h2 className="section-header">
@@ -68,7 +63,6 @@ export default function App() {
           <WorkEx isMobile={isMobile} />
         </div>
       </div>
-      {/* Other Section */}
       <div id="section-other">
         <div className="section-card section-other">
           <h2 className="section-header">
@@ -78,9 +72,7 @@ export default function App() {
           <Other isMobile={isMobile} />
         </div>
       </div>
-      {/* Quick Nav Floating Button */}
       <ScrollButton />
-      {/* Chatbot floating box */}
       <Chatbot />
     </div>
   );

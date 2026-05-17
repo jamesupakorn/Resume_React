@@ -4,7 +4,7 @@ import translationTH from "./Locales/th/translation.json";
 import translationEN from "./Locales/en/translation.json";
 
 i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(initReactI18next)
   .init({
     resources: {
       th: {

@@ -2,14 +2,6 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import ChatBot from 'react-simple-chatbot';
 import { useTranslation } from 'react-i18next';
 
-const Greeting = ({ lang }) => (
-  <div className="chatbot-greeting">
-    {lang === 'th'
-      ? 'สวัสดีค่ะ! ต้องการสอบถามข้อมูลอะไรเกี่ยวกับเจ้าของเว็บนี้?'
-      : 'Hello! What would you like to know about the owner of this website?'}
-  </div>
-);
-
 // ใช้ component แสดงปุ่มเอง เพื่อหลีกเลี่ยง bug options ซ้ำใน react-simple-chatbot
 const OptionButtons = ({ lang, triggerNextStep }) => {
   const opts = [
